@@ -7,7 +7,8 @@
 register_nav_menus(array(
     'top-bar-l' => 'Left Top Bar', // registers the menu in the WordPress admin menu editor
     'top-bar-r' => 'Right Top Bar',
-    'mobile-off-canvas' => 'Mobile'
+    'mobile-off-canvas' => 'Left Mobile',
+    'mobile-off-canvas-r' => 'Right Mobile'
 ));
 
 
@@ -67,6 +68,28 @@ if ( ! function_exists( 'foundationPress_mobile_off_canvas' ) ) {
 	        'menu' => '',                                   // menu name
 	        'menu_class' => 'off-canvas-list',              // adding custom nav class
 	        'theme_location' => 'mobile-off-canvas',        // where it's located in the theme
+	        'before' => '',                                 // before each link <a> 
+	        'after' => '',                                  // after each link </a>
+	        'link_before' => '',                            // before each link text
+	        'link_after' => '',                             // after each link text
+	        'depth' => 5,                                   // limit the depth of the nav
+	        'fallback_cb' => false,                         // fallback function (see below)
+	        'walker' => new top_bar_walker()
+	    ));
+	}
+}
+
+/**
+ * Mobile off-canvas right
+ */
+if ( ! function_exists( 'foundationPress_mobile_off_canvas_r' ) ) {
+	function foundationPress_mobile_off_canvas_r() {
+	    wp_nav_menu(array( 
+	        'container' => false,                           // remove nav container
+	        'container_class' => '',                        // class of container
+	        'menu' => '',                                   // menu name
+	        'menu_class' => 'off-canvas-list',              // adding custom nav class
+	        'theme_location' => 'mobile-off-canvas-r',      // where it's located in the theme
 	        'before' => '',                                 // before each link <a> 
 	        'after' => '',                                  // after each link </a>
 	        'link_before' => '',                            // before each link text

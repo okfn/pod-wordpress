@@ -21,7 +21,9 @@
 			echo wp_title( ' | ', 'false', 'right' ); bloginfo( 'name' );
 		} ?></title>
 		
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/app.css" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/js/slick/slick.css" />
 		
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
@@ -48,9 +50,21 @@
 			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
 
 		</section>
+    
+    <? if ( has_nav_menu( 'mobile-off-canvas-r' ) ) { ?>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    <? } ?>
+    
 	</nav>
 
-	<?php get_template_part('parts/off-canvas-menu'); ?>
+	<?php get_template_part('parts/off-canvas-menu'); 
+  
+  
+    get_template_part('parts/off-canvas-menu-r');
+  
+  ?>
 
 	<?php get_template_part('parts/top-bar'); ?>
 

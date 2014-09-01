@@ -40,12 +40,12 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+   $font-weight-bold: 600 !default;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+   $body-bg: $dark-color;
+   $body-font-color: #565656;
+   $body-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -59,12 +59,12 @@ $body-font-weight: $font-weight-normal;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #009fe3;
+   $secondary-color: #ea7622;
+   $alert-color: #ca181a;
+   $success-color: #bccf02;
+   $warning-color: #ea7622;
+   $info-color: #393939;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -124,9 +124,9 @@ $primary-color: #008CBA;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
+   $header-font-weight: $font-weight-bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+   $header-font-color: $body-font-color;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -361,7 +361,7 @@ $primary-color: #008CBA;
 // $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
+   $button-font-sml: rem-calc(14);
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
@@ -696,7 +696,7 @@ $magellan-padding: 0 !important;
 
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: #333;
+   $tabbar-bg: $primary-color;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
@@ -1209,11 +1209,11 @@ $sub-nav-active-cursor: default;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+   $topbar-bg-color: #fff;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+   $topbar-height: 60px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1230,12 +1230,12 @@ $sub-nav-active-cursor: default;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
-// $topbar-link-color-active-hover: #fff;
+   $topbar-link-color: $body-font-color;
+   $topbar-link-color-hover: $body-font-color;
+   $topbar-link-color-active: $body-font-color;
+   $topbar-link-color-active-hover: $body-font-color;
 // $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+   $topbar-link-font-size: rem-calc(14);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: #555555;

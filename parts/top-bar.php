@@ -6,8 +6,8 @@
             </li>
         </ul>
         <section class="top-bar-section">
-            <?php foundationPress_top_bar_l(); ?>
             <?php foundationPress_top_bar_r(); ?>
+            <?php foundationPress_top_bar_l(); ?>
         </section>
     </nav>
 </div>
