@@ -52,7 +52,7 @@ function showAdminMessages()
 
     if(count($plugin_messages) > 0)
     {
-      echo '<div id="message" class="updated">';
+      echo '<div class="update-nag">';
   
         foreach($plugin_messages as $message)
         {
@@ -63,7 +63,7 @@ function showAdminMessages()
     }
     if(count($plugin_errors) > 0)
     {
-      echo '<div id="message" class="error">';
+      echo '<div class="error">';
   
         foreach($plugin_errors as $error)
         {
